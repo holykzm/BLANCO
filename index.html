@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>予約フォーム</title>
+    <title>BLANCO予約フォーム</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -29,6 +29,14 @@
 
 <body>
 <style media="screen">
+  .mini_h2 {
+    padding: 0.2em 0.3em;
+    margin: 0 0.2em;
+    border-radius: 5px;
+    background: #f1f2f3;
+    color: #404040;
+    font-size: 0.9em;
+    }
 
   .horizontal_scroll {
     list-style: none;
@@ -85,7 +93,7 @@ margin-top: 20px;
   position: absolute;
   top: 0; /* 上からの位置 */
   left: 0;
-  height: 35px; /* 幅 */
+  min-height: 35px; /* 幅 */
   width: 100%; /* 幅 */
   border: solid 2px #d4dae2; /* 線 */
   border-radius: 4px;
@@ -124,6 +132,7 @@ font-weight: bold;
 
 <div class="box">
 <h2 class="mt-3"><img src="./h2/h2 (1).svg" alt="希望日付"></h2>
+    <span class="mini_h2">ご希望の日付</span><br>
         <p>定休日：日曜日・不定休</p>
         <input class="form-control" type="text" id="datepicker"maxlength="10" placeholder="日付を選ぶ"><br>
 </div>
@@ -132,19 +141,22 @@ font-weight: bold;
 
 <div class="box">
 <h2 class="mt-3"><img src="./h2/h2 (2).svg" alt="希望時間"></h2>
+    <span class="mini_h2">ご希望の時間</span><br>
         <input class="form-control" type="text" id="timepicker"maxlength="10" placeholder="時間を選ぶ">
 </div>
 
 <!--  -->
 
 <div class="box">
-        <h2 class="mt-3"><img src="h2 (3).svg" alt="お名前"></h2>
+        <h2 class="mt-3"><img src="./h2/h2 (3).svg" alt="お名前"></h2>
+    <span class="mini_h2">お名前</span><br>
             <input class="form-control w-100 mt-1" name="names" maxlength="10" placeholder="お名前を入力">
 </div>
 <!--  -->
 
 <div class="box">
-<h2 class="mt-3"><img src="./h2/h2 (4).svg" alt="担当指名（指名がある場合のみ）"></h2>
+<h2 class="mt-3"><img src="./h2/h2 (4).svg" alt="担当指名"></h2>
+    <span class="mini_h2">担当指名（ある場合のみ）</span><br>
 
         <label class="btn btn-outline-secondary">
           <input type="radio" name="s-name" value="なし" autocomplete="off" checked>指名なし
@@ -193,6 +205,7 @@ font-weight: bold;
 
 <div class="box">
 <h2 class="mt-3"><img src="./h2/h2 (5).svg" alt="メニュー"></h2>
+    <span class="mini_h2">ご希望のメニュー</span><br>
 
         <br><p>相談がある場合などは『概要』に入力できます。<br><br>
         <strong>複数選択できます</strong><br>例）全身脱毛にVIOを追加したい場合は両方を選択♪</p>
@@ -221,7 +234,7 @@ font-weight: bold;
   <input type="checkbox" name="menu" value="【男性】全身脱毛（顔あり・VIO別）" autocomplete="off">
    <span class="checkmark"><strong>【男性】全身脱毛（顔あり・VIO別）</strong>￥9900</span>
 </label>
-<br>
+<br><br>
 <div class="my-checkbox2">
 <p>男性のVIOとその周辺は施術しておりません</p>
 </div>
@@ -305,8 +318,9 @@ font-weight: bold;
 <!--  -->
 
 <h2 class="mt-3"><img src="./h2/h2 (6).svg" alt="概要"></h2>
+        <span class="mini_h2">概要</span><br>
 <div>
-<input class="form-control w-100 mt-1" name="memo" placeholder="例)子供も同じ時間で予約できますか？">
+<input class="form-control w-100 mt-1" name="memo" placeholder="例)カップルで『よもぎ蒸し』できますか？">
 </div>
   <br>
 <input type="submit" class="p-3 mt-4 mb-5 btn sousin" value="送信">
