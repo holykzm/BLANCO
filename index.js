@@ -10,9 +10,9 @@ $(function () {
       //タイムピッカー用スクリプト
       $("#timepicker").pickatime({
       format: "HH:i",
-      interval: 30, //時間間隔（分で指定）
+      interval: 5, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [19,00] //最大時間
       });
     });
 
