@@ -31,7 +31,6 @@ $(function () {
         var time = $('#timepicker').val();
         var time2 = $('#timepicker2').val();
         var names = $('input[name="names"]').val();
-        var staff = $('input[name="s-name"]:checked').val();
 
         var menu = $('input[name="menu"]:checked').map(function(){
           return $(this).val();
