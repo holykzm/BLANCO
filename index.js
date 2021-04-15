@@ -71,6 +71,14 @@ $(function () {
         var date = $('#datepicker').val();
         var time = $('#timepicker').val();
         var time2 = $('#timepicker2').val();
+        
+        var date = $('#datepicker2').val();
+        var time = $('#timepicker2-1').val();
+        var time2 = $('#timepicker2-2').val();
+        var date = $('#datepicker3').val();
+        var time = $('#timepicker3-1').val();
+        var time2 = $('#timepicker2-2').val();
+        
         var names = $('input[name="names"]').val();
 
         var menu = $('input[name="menu"]:checked').map(function(){
