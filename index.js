@@ -73,7 +73,7 @@ $(function () {
         var time2 = $('#timepicker2').val();
         
         var date2 = $('#datepicker2').val();
-        var time21 = $('#timepicker2-1').val();
+        var time21 = $('#timepicker2-1'+"あ").val();
         var time22 = $('#timepicker2-2').val();
         var date3 = $('#datepicker3').val();
         var time31 = $('#timepicker3-1').val();
