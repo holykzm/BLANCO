@@ -88,7 +88,7 @@ $(function () {
         var memo = $('input[name="memo"]').val();
 
 
-        var msg = `希望日：${date}\n\n時間：${time}～${time2}までの間\n\n【第２希望】\n\n日：${date2}\n\n時間：${time21}～${time22}までの間【第３希望】\n\n日：${date3}\n\n時間：${time31}～${time32}までの間\n\n氏名：${names}様\n\nメニュー：${menu}\n\n概要：${memo}\n\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
+        var msg = `希望日：${date}\n\n時間：${time}～${time2}までの間\n\n【第２希望】\n\n${date2}\n\n${time21}～${time22}までの間\n\n【第３希望】\n\n${date3}\n\n${time31}～${time32}までの間\n\n氏名：${names}様\n\nメニュー：${menu}\n\n概要：${memo}\n\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
         sendText(msg);
 
         return false;
