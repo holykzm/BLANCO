@@ -21,6 +21,47 @@ $(function () {
       min: [10,00], //最小時間
       max: [19,00] //最大時間
       });
+      //デートピッカー2
+      $("#datepicker2").pickadate({
+      format: "yyyy年mm月dd日",
+      // 良福寺なら１だけ
+      disable: [7]
+      });
+      //タイムピッカー2-1
+      $("#timepicker2-1").pickatime({
+      format: "HH:i",
+      interval: 5, //時間間隔（分で指定）
+      min: [10,00], //最小時間
+      max: [19,00] //最大時間
+      });
+      //タイムピッカー2-2
+      $("#timepicker2-2").pickatime({
+      format: "HH:i",
+      interval: 5, //時間間隔（分で指定）
+      min: [10,00], //最小時間
+      max: [19,00] //最大時間
+      });
+      //デートピッカー2
+      $("#datepicker3").pickadate({
+      format: "yyyy年mm月dd日",
+      // 良福寺なら１だけ
+      disable: [7]
+      });
+      //タイムピッカー3-1
+      $("#timepicker3-1").pickatime({
+      format: "HH:i",
+      interval: 5, //時間間隔（分で指定）
+      min: [10,00], //最小時間
+      max: [19,00] //最大時間
+      });
+      //タイムピッカー3-2
+      $("#timepicker3-2").pickatime({
+      format: "HH:i",
+      interval: 5, //時間間隔（分で指定）
+      min: [10,00], //最小時間
+      max: [19,00] //最大時間
+      });
+
     });
 
    
