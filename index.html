@@ -38,158 +38,186 @@
 </head>
 
 <body>
-<style media="screen">
+   <style media="screen">
+        .mini_h2 {
+            padding: 0.2em 0.3em;
+            margin: 0 0.2em;
+            border-radius: 5px;
+            background: #f1f2f3;
+            color: #404040;
+            font-size: 0.9em;
+            display: block;
+            text-align: center;
+        }
 
-  .mini_h2 {
-    padding: 0.2em 0.3em;
-    margin: 0 0.2em;
-    border-radius: 5px;
-    background: #f1f2f3;
-    color: #404040;
-    font-size: 0.9em;
-    display: block;
-    text-align: center;
-    }
+        .horizontal_scroll {
+            list-style: none;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 0 12px 8px;
+            display: -ms-flexbox;
+            display: flex;
+        }
 
-  .horizontal_scroll {
-    list-style: none;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 0 12px 8px;
-    display: -ms-flexbox;
-    display: flex; }
-
-.horizontal_scroll li {margin-right: 5px;}
-
-
-h2 {
-  padding: 0.5em;
-  color: #ff968f;
-  border-top: dashed 3px #ff968f;
-}
+        .horizontal_scroll li {
+            margin-right: 5px;
+        }
 
 
-.box {
-margin-top: 20px;
-}
-
-.p-3{width: 100%;}
-
-/* ============================ */
-.my-checkbox {
-  display: block;
-  position: relative;
-  margin: 20px;
-  color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  user-select: none;
-  font-size: 18px;
-}
-
-.my-checkbox2 {
-    display: block;
-    position: relative;
-    margin: 0px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-    user-select: none;
-    font-size: 16px;
-    padding: 0px 5px 0px 18px;
-    margin-top: 19px;
-}
-
-.my-checkbox input{
-  display:none;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0; /* 上からの位置 */
-  left: 0;
-  min-height: 35px; /* 幅 */
-  width: 100%; /* 幅 */
-  border: solid 2px #d4dae2; /* 線 */
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding-left:8px;
-}
+        h2 {
+            padding: 0.5em;
+            color: #ff968f;
+            border-top: dashed 3px #ff968f;
+        }
 
 
-/* チェックが入ったとき */
-.my-checkbox
-  input:checked + .checkmark{
-    background-color: #ea809b; /* チェック時の色 */
-    border-color: #d6496d; /* チェック時の色 */
-    color:#464646;
-  }
+        .box {
+            margin-top: 20px;
+        }
+
+        .p-3 {
+            width: 100%;
+        }
+
+        /* ============================ */
+        .my-checkbox {
+            display: block;
+            position: relative;
+            margin: 20px;
+            color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            user-select: none;
+            font-size: 18px;
+        }
+
+        .my-checkbox2 {
+            display: block;
+            position: relative;
+            margin: 0px;
+            color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            user-select: none;
+            font-size: 16px;
+            padding: 0px 5px 0px 18px;
+            margin-top: 19px;
+        }
+
+        .my-checkbox input {
+            display: none;
+        }
+
+        .checkmark {
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 35px;
+            width: 100%;
+            border: solid 2px #d4dae2;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding-left: 8px; */
+            display: block;
+            padding: 10px;
+            border-radius: 1rem;
+            border: 2px solid #d6496d8f;
+        }
 
 
-  .sousin{
-    color: #fff;
-background-color: #757575;
-border: #636363 solid 2px;
-font-size: 25px;
-font-weight: bold;
-  }
+        /* チェックが入ったとき */
+        .my-checkbox input:checked+.checkmark {
+            background-color: #ea809b;
+            /* チェック時の色 */
+            border-color: #d6496d;
+            /* チェック時の色 */
+            color: #464646;
+        }
 
-  h3{
-    margin-top: 30px;
-    text-align: center;
-  }
 
-  .time-picker-orign input {
-    width: 102px !important;
-    display: inline-block;
-    padding: 0px 0px 0px 8px;
-  }
+        .sousin {
+            color: #fff;
+            background-color: #757575;
+            border: #636363 solid 2px;
+            font-size: 25px;
+            font-weight: bold;
+        }
 
-  .time-picker-orign span {
-    font-size: 1rem;
-  }
+        h3 {
+            margin-top: 30px;
+            text-align: center;
+        }
 
-br.mini-br {
-  display:none;
-}
-  @media screen and (max-width: 370px) {
-  br.mini-br {
-    display:block;
-  }
-  }
+        .time-picker-orign input {
+            width: 102px !important;
+            display: inline-block;
+            padding: 0px 0px 0px 8px;
+        }
 
-  .accordion-check{
-  display: none;
-}
-.accordion-label{
-  background: #999999;
-  border-radius: 50px;
-  color: #fff;
-  display: inline-block;
-  margin-bottom: 1px;
-  padding: 10px 20px;
-}
+        .time-picker-orign span {
+            font-size: 1rem;
+        }
 
-.accordion-content{
-  border-radius: 10px; 
-  height: 0;
-  opacity: 0;
-  padding: 10px;
-  transition: .5s;
-  visibility: hidden;
-}
-.accordion-check:checked + .accordion-label + .accordion-content{
-  margin: 10px 0px;
-  height: 100%;
-  opacity: 1;
-  padding: 10px;
-  visibility: visible;
-  border: 2px solid #b8b8b8;
-}
+        br.mini-br {
+            display: none;
+        }
 
-.sub-box h2 {
-  border-top: none;
-  padding: 0px;
-}
-</style>
+        @media screen and (max-width: 370px) {
+            br.mini-br {
+                display: block;
+            }
+        }
+
+        .accordion-check {
+            display: none;
+        }
+
+        .accordion-label {
+            background: #999999;
+            border-radius: 50px;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 1px;
+            padding: 10px 20px;
+        }
+
+        .accordion-content {
+            border-radius: 10px;
+            height: 0;
+            opacity: 0;
+            padding: 10px;
+            transition: .5s;
+            visibility: hidden;
+        }
+
+        .accordion-check:checked+.accordion-label+.accordion-content {
+            margin: 10px 0px;
+            height: 100%;
+            opacity: 1;
+            padding: 10px;
+            visibility: visible;
+            border: 2px solid #b8b8b8;
+        }
+
+        .sub-box h2 {
+            border-top: none;
+            padding: 0px;
+        }
+
+        .alert span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d6496d;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0px;
+        }
+    </style>
 
     <form class="mx-2 px-2">
 
